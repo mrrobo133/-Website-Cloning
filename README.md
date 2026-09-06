@@ -36,7 +36,7 @@ git clone https://github.com/mrrobo133/-Website-Cloning.git
 ```
  folder mein login
 ```bash
-cd -Website-Cloning
+cd ./-Website-Cloning
 ```
  file ko install karo 
 ```bash
