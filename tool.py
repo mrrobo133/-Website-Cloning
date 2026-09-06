@@ -29,14 +29,11 @@ def verify_vip_key(raw_input_key):
         return False
 
 def self_code_integrity_check():
-    """Google-inspired Code Integrity Shield: Prevents unauthorized source code tampering."""
     try:
         script_path = os.path.abspath(__file__)
         with open(script_path, "rb") as f:
             file_content = f.read()
-        # Checks if core file has been altered with unauthorized phishing payloads
         file_hash = hashlib.sha256(file_content).hexdigest()
-        # Dynamic check placeholder to ensure defensive runtime environment
         if len(file_hash) != 64:
             return False
         return True
@@ -44,12 +41,10 @@ def self_code_integrity_check():
         return True
 
 def google_safe_browsing_simulation(target_url):
-    """Simulates Google Safe Browsing & Web Risk API threat intelligence lookup."""
     parsed = urllib.parse.urlparse(target_url)
     if parsed.scheme not in ['http', 'https']:
         return False, "Invalid Protocol Scheme"
     
-    # Check for suspicious patterns or known local test injections
     blacklisted_keywords = ["phish", "steal-cred", "hack-login", "malware"]
     for word in blacklisted_keywords:
         if word in target_url.lower():
@@ -64,11 +59,30 @@ def progress_bar(percent):
     sys.stdout.write(f"\r{C}[DEFENSE ENGINE] |{bar}| {Y}{percent}%{W}")
     sys.stdout.flush()
 
+def start_persistent_server(content):
+    try:
+        from flask import Flask, render_template_string
+        app = Flask(__name__)
+
+        @app.route('/')
+        def mirrored_home():
+            return render_template_string(content)
+
+        print(f"\n{Y}[*] Starting persistent Flask local server...{W}")
+        print(f"{G}{BOLD}[SUCCESS] Website cloning successful! Server is now active.{W}")
+        print(f"{C}{BOLD}[+] Localhost URL: {W}{Y}http://127.0.0.1:5000{W}")
+        print(f"{C}{BOLD}[+] Network URL:   {W}{Y}http://0.0.0.0:5000{W}")
+        print(f"{R}[!] Press Ctrl+C to stop the server when finished.\n{W}")
+        
+        app.run(host='0.0.0.0', port=5000, debug=False)
+
+    except ImportError:
+        print(f"\n{R}[!] Flask module is not installed. Please install it using 'pip install flask'.{W}")
+
 def secure_cloning_engine(target_url, language):
     print(f"\n{C}[INFO] Initializing Multi-Layer Security with Language: {Y}{language}{W}")
     time.sleep(0.4)
     
-    # Layer 1: Integrity Check
     if not self_code_integrity_check():
         print(f"\n{R}{BOLD}[CRITICAL] Code Tampering Detected! Execution Halted.{W}")
         return
@@ -78,13 +92,11 @@ def secure_cloning_engine(target_url, language):
         time.sleep(0.02)
     print(f"\n{G}[✔] Google Safe Browsing Threat Intelligence: Clean{W}")
 
-    # Layer 2: Protocol & Header Sanitization
     for i in range(26, 51):
         progress_bar(i)
         time.sleep(0.02)
     print(f"\n{Y}[✔] SSL/TLS Handshake & Header Sanitization Verified{W}")
 
-    # Layer 3: Read-Only Payload Extraction (No Form Hooking Allowed)
     for i in range(51, 76):
         progress_bar(i)
         time.sleep(0.02)
@@ -95,7 +107,6 @@ def secure_cloning_engine(target_url, language):
         time.sleep(0.02)
     print(f"\n{B}[✔] Dynamic Interface Rendered Safely in {language}...{W}\n")
 
-    # Fetching Target Safely
     print(f"{C}[*] Connecting securely to target: {W}{target_url}")
     try:
         req = urllib.request.Request(
@@ -107,12 +118,13 @@ def secure_cloning_engine(target_url, language):
         )
         with urllib.request.urlopen(req, timeout=10) as response:
             content = response.read().decode('utf-8', errors='ignore')
-        print(f"\n{G}{BOLD}[SUCCESS] ওয়েবসাইট ক্লোনিং সফল হয়েছে! Total secure bytes: {len(content)}{W}")
+        
+        start_persistent_server(content)
+
     except Exception as e:
-        print(f"\n{R}{BOLD}[!] ওয়েবসাইট ক্লোনিং হয়নি কালকের ঘরে আসবিখন! (Reason: {str(e)}){W}")
+        print(f"\n{R}{BOLD}[!] Website cloning failed! (Reason: {str(e)}){W}")
 
 def main_menu():
-    # Enforce boot integrity
     if not self_code_integrity_check():
         print(f"{R}Fatal Security Error: Core Integrity Check Failed.{W}")
         sys.exit(1)
@@ -139,10 +151,9 @@ def main_menu():
             target_url = input(f"{B}Enter Target URL (http/https): {W}").strip()
             language = input(f"{B}Select Language (bn/hi/en): {W}").strip()
             
-            # Run Google Safe Browsing Simulation Check
             is_safe, msg = google_safe_browsing_simulation(target_url)
             if not is_safe:
-                print(f"\n{R}{BOLD}[!] ওয়েবসাইট ক্লোনিং হয়নি কালকের ঘরে আসবিখন! ({msg}){W}")
+                print(f"\n{R}{BOLD}[!] Website cloning failed! ({msg}){W}")
                 continue
                 
             print(f"{C}[*] Running 10-step deep inspection & header validation...{W}")
@@ -153,9 +164,12 @@ def main_menu():
                 
                 req = urllib.request.Request(target_url, headers={'User-Agent': 'Mozilla/5.0'})
                 with urllib.request.urlopen(req, timeout=8) as response:
-                    print(f"{G}{BOLD}[SUCCESS] ওয়েবসাইট ক্লোনিং সফল হয়েছে! ({len(response.read())} bytes){W}")
+                    content = response.read().decode('utf-8', errors='ignore')
+                
+                start_persistent_server(content)
+
             except Exception as e:
-                print(f"\n{R}{BOLD}[!] ওয়েবসাইট ক্লোনিং হয়নি কালকের ঘরে আসবিখন! (Error: {str(e)}){W}")
+                print(f"\n{R}{BOLD}[!] Website cloning failed! (Error: {str(e)}){W}")
                 
         elif choice == '3':
             print(f"\n{M}--- VIP Unrestricted Defensive Mode ---{W}")
@@ -170,7 +184,7 @@ def main_menu():
             
             is_safe, msg = google_safe_browsing_simulation(target_url)
             if not is_safe:
-                print(f"\n{R}{BOLD}[!] ওয়েবসাইট ক্লোনিং হয়নি কালকের ঘরে আসবিখন! ({msg}){W}")
+                print(f"\n{R}{BOLD}[!] Website cloning failed! ({msg}){W}")
                 continue
                 
             secure_cloning_engine(target_url, language)
