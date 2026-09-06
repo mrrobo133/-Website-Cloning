@@ -30,14 +30,13 @@ License & Ethics:
 Distributed under the MIT License with strict ethical boundaries. Use responsibly and only on systems you own or have explicit written authorization to test.
 
 Installation, Setup & Usage
-
+fast git clone
 ```bash
 git clone https://github.com/mrrobo133/-Website-Cloning.git
 ```
  folder mein login
 ```bash
-cd 
-
+cd -Website-Cloning
 ```
  file ko install karo 
 ```bash
