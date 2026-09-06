@@ -31,14 +31,18 @@ Distributed under the MIT License with strict ethical boundaries. Use responsibl
 
 Installation, Setup & Usage
 
-
-git clone 
-
-
-cd YOUR_REPOSITORY_NAME
-
-
+```bash
+git clone https://github.com/mrrobo133/-Website-Cloning.git
+```
+ folder mein login
+```bash
+cd 
+```
+ file ko install karo 
+```bash
 bash install.sh
-
-
+```
+ Run tool 
+```bash 
 python3 tool.py
+```
