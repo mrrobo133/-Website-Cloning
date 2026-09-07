@@ -84,4 +84,11 @@ python3 tool.py
 * **How to use:** Select option `4` to terminate the utility loop.
 
 * ​Legal & Source Code Modification Disclaimer:
-​This tool is provided "as is" without warranty of any kind. If any individual, third party, or malicious actor modifies, alters, or reverse-engineers the source code of this repository to bypass built-in security layers, anti-phishing restrictions, or bot-detection mechanisms for unauthorized, fraudulent, or illegal activities, the original author bears zero responsibility or liability. The sole legal, ethical, and financial accountability for any misuse, damage, or legal consequences rests entirely upon the user or modifier of the code.
+* 
+​This tool is provided "as is" without warranty of any kind. If any individual, third party, or malicious actor modifies, alters, or reverse-engineers the
+
+source code of this repository to bypass built-in security layers, anti-phishing restrictions, or bot-detection mechanisms for unauthorized, fraudulent, or 
+
+illegal activities, the original author bears zero responsibility or liability. The sole legal, ethical, and financial accountability for any misuse, 
+
+damage, or legal consequences rests entirely upon the user or modifier of the code.
