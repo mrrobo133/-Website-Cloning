@@ -29,9 +29,7 @@ Version 2.0 brings massive architectural upgrades to ensure stability, performan
 
 Clone the repository and install the required dependencies:
 
-```bash
-pip install requests beautifulsoup4 flask
- ```
+
 This tool is strictly developed for educational, testing, and authorized local administration purposes only. 
 Unauthorized cloning, mirroring, or replication of copyrighted or commercial websites to deceive users, 
 harvest credentials, or execute phishing campaigns is strictly illegal. The developer/author assumes 
@@ -63,7 +61,9 @@ License & Ethics:
 Distributed under the MIT License with strict ethical boundaries. Use responsibly and only on systems you own or have explicit written authorization to test.
 
 Installation, Setup & Usage
-fast git clone
+fast git clone```bash
+pip install requests beautifulsoup4 flask
+ ```
 ```bash
 git clone https://github.com/mrrobo133/-Website-Cloning.git
 ```
