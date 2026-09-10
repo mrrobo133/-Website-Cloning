@@ -1,4 +1,4 @@
-DISCLAIMER:<div align="center">
+:<div align="center">
 
 # 🚀 Ultimate Secure Website Mirroring Tool v2.0
 > **An Advanced Defensive Kernel & Asset-Fixed Mirroring Framework**
@@ -25,10 +25,7 @@ Version 2.0 brings massive architectural upgrades to ensure stability, performan
 
 ---
 
-## 📦 Installation & Setup
-
-Clone the repository and install the required dependencies:
-
+⚠️𝗗𝗜𝗦𝗖𝗟𝗔𝗠𝗘𝗥
 
 This tool is strictly developed for educational, testing, and authorized local administration purposes only. 
 Unauthorized cloning, mirroring, or replication of copyrighted or commercial websites to deceive users, 
@@ -61,9 +58,11 @@ License & Ethics:
 Distributed under the MIT License with strict ethical boundaries. Use responsibly and only on systems you own or have explicit written authorization to test.
 
 Installation, Setup & Usage
-fast git clone```bash
+
+```bash
 pip install requests beautifulsoup4 flask
  ```
+fast git clone
 ```bash
 git clone https://github.com/mrrobo133/-Website-Cloning.git
 ```
