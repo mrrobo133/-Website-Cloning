@@ -1,4 +1,37 @@
-DISCLAIMER: 
+DISCLAIMER:<div align="center">
+
+# 🚀 Ultimate Secure Website Mirroring Tool v2.0
+> **An Advanced Defensive Kernel & Asset-Fixed Mirroring Framework**
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-2.0-blue?style=for-the-badge&logo=python&logoColor=white" alt="Version 2.0">
+  <img src="https://img.shields.io/badge/Status-Stable-success?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/badge/License-Educational-orange?style=for-the-badge" alt="License">
+</p>
+
+</div>
+
+---
+
+## 🔥 What's New in Version 2.0
+
+Version 2.0 brings massive architectural upgrades to ensure stability, performance, and accurate local web rendering:
+
+* **🛠️ Advanced Asset Fixer (`BeautifulSoup`):** Automatically injects `<base>` routing tags to resolve broken CSS, JavaScript, and image links from the target site.
+* **⚡ Flask Framework Integration:** Replaced basic HTTP servers with a high-performance Flask backend engine.
+* **🛡️ Enhanced Security Shield:** Integrated mock integrity checks and safe-browsing telemetry routines.
+* **🌐 Robust Request Handlers:** Built with advanced `requests` headers to bypass basic user-agent blocks.
+* **🎨 Modernized CLI Interface:** Clean, colored terminal outputs with refined progress indicators.
+
+---
+
+## 📦 Installation & Setup
+
+Clone the repository and install the required dependencies:
+
+```bash
+pip install requests beautifulsoup4 flask
+ ```
 This tool is strictly developed for educational, testing, and authorized local administration purposes only. 
 Unauthorized cloning, mirroring, or replication of copyrighted or commercial websites to deceive users, 
 harvest credentials, or execute phishing campaigns is strictly illegal. The developer/author assumes 
